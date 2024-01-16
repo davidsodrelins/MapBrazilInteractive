@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Map Brazil Interactive
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="image.png" alt="Image Map Brazil Interactive">
+
 
 ## To install
 
