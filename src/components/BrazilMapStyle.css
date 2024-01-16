@@ -1,0 +1,113 @@
+.brasil {
+  --default-states-blue-stroke: #6d7ef0;
+  --default-states-blue-black-fill: #495eec;
+  --default-states-stroke: #e2e3e5;
+  --default-regions-blue-stroke: #6d7ef0;
+  --default-regions-blue-black-fill: #495eec;
+  --default-regions-stroke: #e2e3e5;
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  opacity: initial;
+}
+
+svg text {
+  fill: #274264;
+  font-family: monospace;
+  font-weight: bolder;
+}
+
+.mapa-svg-estados,
+.mapa-svg-regioes {
+  transition: 0.8s ease;
+  -webkit-transition: 0.8s ease;
+  -moz-transition: 0.8s ease;
+  -ms-transition: 0.8s ease;
+  -o-transition: 0.8s ease;
+  stroke-dasharray: 180%;
+  stroke-dashoffset: 0%;
+}
+
+.mapa-svg-estados,
+.mapa-svg-regioes,
+.pointer-svg-map {
+  cursor: pointer;
+  fill: var(--default-states-blue-stroke);
+}
+
+.mapa-svg-estados text,
+.mapa-svg-regioes text {
+  stroke: none;
+}
+
+.mapa-svg-estados:hover,
+.mapa-svg-regioes:hover {
+  fill: var(--default-states-blue-black-fill);
+}
+
+/* Map Estados Styles */
+.mapa-svg-estados {
+  stroke-width: 0.2;
+  stroke: var(--default-regions-stroke);
+}
+
+.mapa-svg-estados-active,
+.mapa-svg-regioes-active {
+  stroke: var(--default-states-blue-stroke);
+  fill: var(--default-states-blue-black-fill);
+}
+
+/* Map Regioes Styles */
+.mapa-svg-regioes {
+  stroke-width: 0.3;
+  stroke: var(--default-regions-stroke);
+}
+
+/* Pointer Animation */
+@keyframes pointer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.pointer-svg-map {
+  animation-direction: normal;
+  animation-delay: 0.3s;
+}
+
+.inactive-map-svg {
+  opacity: 0.5;
+  stroke: none !important;
+}
+
+.inactive-map-svg:hover {
+  stroke-dashoffset: -120%;
+  cursor: inherit;
+  fill: var(--default-states-blue-black-fill);
+}
+
+#sotreq-select {
+  display: flex;
+  flex-direction: column;
+}
+
+.class-select,
+.selected {
+  outline: none;
+  height: 40px;
+  width: 250px;
+  padding: 10px 18px;
+  border-radius: 32px;
+  color: #495eec;
+  margin-bottom: 2rem;
+}
+
+.selected {
+  fill: #495eec !important;
+}
